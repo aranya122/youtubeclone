@@ -1,0 +1,94 @@
+/* Login.css */
+
+/* Container for the Login page */
+.login-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Style for the Login header (h2) */
+.login-header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form container */
+.login-container form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for input fields */
+.login-container input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.login-container input:focus {
+  outline: none;
+  border-color: #0073e6;
+}
+
+/* Styling for the Login button */
+.login-container button {
+  padding: 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.login-container button:hover {
+  background-color: #005bb5;
+}
+
+/* Text for the Register link */
+.register-link-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.register-link-text a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.register-link-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+  .login-container {
+    padding: 10px;
+  }
+
+  .login-container form {
+    width: 100%;
+  }
+
+  .login-header {
+    font-size: 24px;
+  }
+}

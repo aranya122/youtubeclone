@@ -1,0 +1,292 @@
+/* General Styles */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f4f4f4;
+    color: #333;
+}
+
+/* Header Styles */
+.header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 15px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.header .hamburger-menu {
+    font-size: 30px;
+    cursor: pointer;
+    background: none;
+    border: none;
+    color: white; /* Set hamburger color */
+}
+
+.header .logo {
+    font-size: 24px;
+    font-weight: bold;
+    color: red;
+    flex-grow: 1;
+    text-align: center;
+}
+
+/* YouTube Logo Styling */
+.logo-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 10px;
+}
+
+.logo-img {
+    width: 50px;  /* Reduced the size of the logo */
+    height: auto;  /* Maintain aspect ratio */
+}
+
+/* Search Bar Styling */
+.header .search-bar {
+    padding: 8px;
+    width: 300px;
+    border-radius: 20px;
+    border: 1px solid #ddd;
+    outline: none;
+}
+
+.header .search-bar:focus {
+    border-color: red;
+}
+
+/* Filter Button Styling */
+.header .filter-buttons button {
+    background-color: black;
+    color: white;
+    border: 1px solid #ddd;
+    padding: 6px 12px;
+    border-radius: 20px;
+    cursor: pointer;
+    margin-left: 10px;
+    font-size: 14px;
+    transition: background-color 0.3s ease, transform 0.3s ease;
+}
+
+/* Hover Effect on Filter Buttons */
+.header .filter-buttons button:hover {
+    transform: scale(1.05); /* Slightly scale up the button */
+}
+
+/* Sidebar Styles */
+.sidebar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 200px;
+    height: 100%;
+    background-color: #fff;
+    box-shadow: 2px 0 10px rgba(8, 198, 49, 0.1);
+    padding-top: 50px;
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+}
+
+/* Sidebar button styles */
+.sidebar button {
+    background-color: transparent;
+    border: none;
+    padding: 15px 20px;
+    width: 100%;
+    text-align: left;
+    font-size: 18px;
+    cursor: pointer;
+    color: #333;
+}
+
+/* Hover effect for sidebar buttons */
+.sidebar button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Active Button Styling */
+.sidebar button.active {
+    background-color: #fff;
+    color: #0073e6; /* Blue text for active button */
+    font-weight: bold;
+}
+
+/* Main Content Styles */
+.main-content {
+    margin-left: 220px;
+    padding: 20px;
+}
+
+/* Video Grid Layout */
+.video-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 1fr)); /* Auto-fill columns with a minimum width */
+    gap: 20px;
+    grid-auto-flow: dense; /* Ensure grid items fill in the available space */
+    justify-items: center; /* Center items within grid cells */
+}
+
+/* Make the video grid horizontally laid out (for larger screens) */
+@media (min-width: 1024px) {
+    .video-grid {
+        grid-template-columns: repeat(4, 1fr); /* Four items per row on large screens */
+    }
+}
+
+/* Make the video grid vertically laid out (for smaller screens) */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(2, 1fr); /* Two items per row on smaller screens */
+    }
+}
+
+/* Video Card Styles */
+.video-card {
+    position: relative;
+    background-color: #fff;
+    border-radius: 10px;
+    overflow: hidden;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    transition: transform 0.3s ease;
+}
+
+.video-card:hover {
+    transform: scale(1.03);
+}
+
+.video-thumbnail {
+    width: 100%;
+    height: 180px;
+    object-fit: cover;
+    border-bottom: 2px solid #f1f1f1;
+}
+
+.video-info {
+    padding: 10px;
+}
+
+.video-info h3 {
+    font-size: 16px;
+    font-weight: bold;
+    color: #333;
+    margin-bottom: 5px;
+}
+
+.video-info p {
+    font-size: 14px;
+    color: #777;
+}
+
+/* Three Dots Menu Styles */
+.menu {
+    position: absolute;
+    top: 10px;
+    right: 10px;
+}
+
+.three-dots {
+    font-size: 24px;
+    background: none;
+    border: none;
+    cursor: pointer;
+    color: #333;
+}
+
+.menu-options {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    display: flex;
+    flex-direction: column;
+    width: 150px;
+    z-index: 10;
+    opacity: 0;
+    visibility: hidden;
+    transition: opacity 0.2s ease, visibility 0.2s ease;
+}
+
+.menu-options.show {
+    opacity: 1;
+    visibility: visible;
+}
+
+.menu-options button {
+    background-color: transparent;
+    border: none;
+    padding: 10px;
+    text-align: left;
+    font-size: 14px;
+    cursor: pointer;
+    color: #333;
+    transition: background-color 0.3s ease;
+}
+
+.menu-options button:hover {
+    background-color: #f0f0f0;
+}
+
+/* Logout Button Styling */
+.logout-button {
+    padding: 10px 20px;
+    background-color: #ff4747; /* Red color for the logout button */
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    font-size: 16px;
+    transition: background-color 0.3s ease;
+    margin-top: 20px;
+}
+
+/* Hover effect for Logout Button */
+.logout-button:hover {
+    background-color: #e03838; /* Darker red when hovered */
+}
+
+.logout-button:focus {
+    outline: none; /* Remove outline on focus */
+}
+
+/* Media Query for Smaller Screens */
+@media (max-width: 768px) {
+    .video-grid {
+        grid-template-columns: repeat(auto-fill, minmax(280px, 1fr)); /* Smaller grid items on smaller screens */
+    }
+
+    .header .search-bar {
+        width: 200px;  /* Adjust search bar width for smaller screens */
+    }
+
+    .header .filter-buttons {
+        display: none;  /* Hide filter buttons on small screens */
+    }
+}
+
+.header .user-initial {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background-color: red; /* Circle color */
+    color: white;
+    width: 40px; /* Circle size */
+    height: 40px; /* Circle size */
+    border-radius: 50%; /* Make it a circle */
+    font-size: 20px; /* Text size */
+    font-weight: bold;
+    margin-right: 10px; /* Spacing */
+    text-transform: uppercase; /* Ensure initial is capitalized */
+  }
+  

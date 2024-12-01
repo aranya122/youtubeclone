@@ -1,0 +1,45 @@
+/* src/CreateChannel.css */
+.create-channel-page {
+    padding: 20px;
+    max-width: 600px;
+    margin: 0 auto;
+    background-color: #f9f9f9;
+    border-radius: 8px;
+  }
+  
+  .create-channel-page h2 {
+    text-align: center;
+    margin-bottom: 20px;
+  }
+  
+  .create-channel-page form {
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .create-channel-page form div {
+    margin-bottom: 15px;
+  }
+  
+  .create-channel-page input,
+  .create-channel-page textarea {
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+  }
+  
+  .create-channel-page button {
+    padding: 10px 20px;
+    background-color: #007bff;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+  }
+  
+  .create-channel-page button:hover {
+    background-color: #0056b3;
+  }
+  
+  

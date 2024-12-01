@@ -1,0 +1,95 @@
+/* Register.css */
+
+/* Container for the Register page */
+.register-container {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 100vh;
+  background-color: #f4f4f4;
+  padding: 20px;
+}
+
+/* Style for the Register header (h2) */
+.register-header {
+  font-size: 32px;
+  font-weight: bold;
+  color: #333;
+  margin-bottom: 20px;
+  text-align: center;
+}
+
+/* Form container */
+.register-container form {
+  display: flex;
+  flex-direction: column;
+  width: 300px;
+  padding: 20px;
+  background-color: #fff;
+  border-radius: 8px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+}
+
+/* Styling for input fields */
+.register-container input {
+  padding: 10px;
+  margin: 10px 0;
+  border: 1px solid #ddd;
+  border-radius: 5px;
+  font-size: 14px;
+}
+
+.register-container input:focus {
+  outline: none;
+  border-color: #0073e6;
+}
+
+/* Styling for the Register button */
+.register-container button {
+  padding: 10px;
+  background-color: #0073e6;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+  font-size: 16px;
+  transition: background-color 0.3s ease;
+}
+
+.register-container button:hover {
+  background-color: #005bb5;
+}
+
+/* Text for the Login link */
+.login-link-text {
+  text-align: center;
+  margin-top: 15px;
+  font-size: 14px;
+  color: #333;
+}
+
+.login-link-text a {
+  color: #0073e6;
+  text-decoration: none;
+}
+
+.login-link-text a:hover {
+  text-decoration: underline;
+}
+
+/* Responsive Design for smaller screens */
+@media (max-width: 600px) {
+  .register-container {
+    padding: 10px;
+  }
+
+  .register-container form {
+    width: 100%;
+  }
+
+  .register-header {
+    font-size: 24px;
+  }
+}
+
